@@ -51,9 +51,10 @@ namespace TechJobsPersistent.Controllers
             return View(addEmployerViewModel);
         }
 
-        public IActionResult About(int id) //*********TODO + views with models**********//
+        public IActionResult About(int id) 
         {
-            return View();
+            Employer theEmployer = context.Employers.Find(id);
+            return View(theEmployer);
         }
     }
 }
